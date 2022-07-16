@@ -1,0 +1,5 @@
+<h1>Найдено со скиллом {{skill_name}}: {{ len_ }}</h1>
+<p>{% for can in candidates %}
+    <a href="/candidate/{{can.id}}/">{{ can.name }}</a><br>
+{% endfor %}
+</p>
