@@ -3,11 +3,10 @@ import json
 
 def load_candidates_from_json(path):
     '''возвращает список кандидатов из файла'''
-    with open (path, 'r', encoding='utf-8') as file:
+    with open(path, 'r', encoding='utf-8') as file:
         tmp = file.read()
         candidates = json.loads(tmp)
     return candidates
-
 
 
 def get_candidate(candidate_id):
@@ -16,7 +15,6 @@ def get_candidate(candidate_id):
     for can in candidates:
         if can['id'] == candidate_id:
             return can
-
 
 
 def get_candidates_by_name(candidate_name):
@@ -39,5 +37,6 @@ def get_candidates_by_skill(skill_name):
         if skill_name.lower() in can['skills'].lower():
             result.append(can)
     return result
+
 
 print(get_candidates_by_name('dela'))
